@@ -6,3 +6,12 @@ B:\Dokumente\Aa_UNI\Systemnahe Programmierung\picsim funktiontester(kann gelösc
 B:\Dokumente\Aa_UNI\Systemnahe Programmierung\picsim funktiontester(kann gelöscht werden)\PicSim\PicSim\obj\Debug\PicSim.csproj.GenerateResource.Cache
 B:\Dokumente\Aa_UNI\Systemnahe Programmierung\picsim funktiontester(kann gelöscht werden)\PicSim\PicSim\obj\Debug\PicSim.exe
 B:\Dokumente\Aa_UNI\Systemnahe Programmierung\picsim funktiontester(kann gelöscht werden)\PicSim\PicSim\obj\Debug\PicSim.pdb
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\bin\Debug\PicSim.exe.config
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\obj\Debug\PicSim.exe
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\obj\Debug\PicSim.pdb
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\bin\Debug\PicSim.exe
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\bin\Debug\PicSim.pdb
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\obj\Debug\PicSim.csprojResolveAssemblyReference.cache
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\obj\Debug\PicSim.Form1.resources
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\obj\Debug\PicSim.Properties.Resources.resources
+B:\Dokumente\Aa_UNI\Systemnahe Programmierung\PicSim\PicSim\obj\Debug\PicSim.csproj.GenerateResource.Cache
