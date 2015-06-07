@@ -361,7 +361,7 @@ namespace PicSim
             SetPortButtons();
             SetStatusIntOpt();
 
-            if (btnsender.BackColor == Color.FromArgb(192, 255, 192))
+            if (btnsender.BackColor == Color.White)
             {
                 switch (btnsender.Name)
                 {
@@ -431,7 +431,7 @@ namespace PicSim
                     }
                     else
                     {
-                        buttonportra.BackColor = Color.FromArgb(192, 255, 192);
+                        buttonportra.BackColor = Color.White;
                         if (!UseExternPorts) buttonportra.Enabled = true;
                         else buttonportra.Enabled = false;
                         labelportra.Text = "in";
@@ -449,7 +449,7 @@ namespace PicSim
                 }
                 else
                 {
-                    buttonportrb.BackColor = Color.FromArgb(192, 255, 192);
+                    buttonportrb.BackColor = Color.White;
                     if (!UseExternPorts) buttonportrb.Enabled = true;
                     else buttonportrb.Enabled = false;
                     labelportrb.Text = "in";
