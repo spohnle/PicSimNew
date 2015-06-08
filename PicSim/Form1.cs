@@ -361,7 +361,7 @@ namespace PicSim
             SetPortButtons();
             SetStatusIntOpt();
 
-            if (btnsender.BackColor == Color.White)
+            if (btnsender.BackColor == Color.FromArgb(192, 255, 192))
             {
                 switch (btnsender.Name)
                 {
@@ -728,7 +728,7 @@ namespace PicSim
         {
 
             string Test = "tbRam";
-            int heigth = 23;
+            int heigth = 27;
             int name = -1;
 
             for (int y = 0; y < 20; y++)
