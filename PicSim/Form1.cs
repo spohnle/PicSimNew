@@ -728,10 +728,10 @@ namespace PicSim
         {
 
             string Test = "tbRam";
-            int heigth = 30;
+            int heigth = 23;
             int name = -1;
 
-            for (int y = 0; y < 18; y++)
+            for (int y = 0; y < 20; y++)
             {
                 if (y % 2 == 0)
                 {
@@ -740,7 +740,7 @@ namespace PicSim
                 int width = 30;
                 for (int x = 0; x < 8; x++)
                 {
-                    if (y == 17 && x >= 4)
+                    if (y == 19 && x >= 8)
                     {
                         break;
                     }

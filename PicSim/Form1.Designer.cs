@@ -187,6 +187,8 @@
             this.lblRam00 = new System.Windows.Forms.Label();
             this.lblRam1 = new System.Windows.Forms.Label();
             this.lblRam0 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.gbMain.SuspendLayout();
             this.gbStack.SuspendLayout();
             this.gbPorts.SuspendLayout();
@@ -197,7 +199,7 @@
             // btnLoadCode
             // 
             this.btnLoadCode.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnLoadCode.Location = new System.Drawing.Point(9, 18);
+            this.btnLoadCode.Location = new System.Drawing.Point(8, 21);
             this.btnLoadCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadCode.Name = "btnLoadCode";
             this.btnLoadCode.Size = new System.Drawing.Size(119, 34);
@@ -209,7 +211,7 @@
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnStart.Location = new System.Drawing.Point(8, 60);
+            this.btnStart.Location = new System.Drawing.Point(8, 54);
             this.btnStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(119, 34);
@@ -221,7 +223,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnReset.Location = new System.Drawing.Point(135, 18);
+            this.btnReset.Location = new System.Drawing.Point(135, 22);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(119, 34);
@@ -233,7 +235,7 @@
             // btnStepByStep
             // 
             this.btnStepByStep.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnStepByStep.Location = new System.Drawing.Point(135, 60);
+            this.btnStepByStep.Location = new System.Drawing.Point(135, 55);
             this.btnStepByStep.Margin = new System.Windows.Forms.Padding(4);
             this.btnStepByStep.Name = "btnStepByStep";
             this.btnStepByStep.Size = new System.Drawing.Size(119, 34);
@@ -303,11 +305,11 @@
             this.gbMain.Controls.Add(this.btnLoadCode);
             this.gbMain.Controls.Add(this.btnReset);
             this.gbMain.Controls.Add(this.btnStepByStep);
-            this.gbMain.Location = new System.Drawing.Point(16, 510);
+            this.gbMain.Location = new System.Drawing.Point(16, 538);
             this.gbMain.Margin = new System.Windows.Forms.Padding(4);
             this.gbMain.Name = "gbMain";
             this.gbMain.Padding = new System.Windows.Forms.Padding(4);
-            this.gbMain.Size = new System.Drawing.Size(267, 172);
+            this.gbMain.Size = new System.Drawing.Size(267, 156);
             this.gbMain.TabIndex = 337;
             this.gbMain.TabStop = false;
             this.gbMain.Text = "Main";
@@ -315,7 +317,7 @@
             // btnHilfe
             // 
             this.btnHilfe.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnHilfe.Location = new System.Drawing.Point(8, 100);
+            this.btnHilfe.Location = new System.Drawing.Point(8, 87);
             this.btnHilfe.Margin = new System.Windows.Forms.Padding(4);
             this.btnHilfe.Name = "btnHilfe";
             this.btnHilfe.Size = new System.Drawing.Size(119, 34);
@@ -327,7 +329,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 144);
+            this.label2.Location = new System.Drawing.Point(119, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 17);
@@ -339,7 +341,7 @@
             this.cbWdtEnabled.AutoSize = true;
             this.cbWdtEnabled.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbWdtEnabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbWdtEnabled.Location = new System.Drawing.Point(135, 107);
+            this.cbWdtEnabled.Location = new System.Drawing.Point(138, 97);
             this.cbWdtEnabled.Margin = new System.Windows.Forms.Padding(4);
             this.cbWdtEnabled.Name = "cbWdtEnabled";
             this.cbWdtEnabled.Size = new System.Drawing.Size(113, 21);
@@ -352,7 +354,7 @@
             // 
             this.lblRuntime.AutoSize = true;
             this.lblRuntime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRuntime.Location = new System.Drawing.Point(9, 144);
+            this.lblRuntime.Location = new System.Drawing.Point(9, 128);
             this.lblRuntime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRuntime.Name = "lblRuntime";
             this.lblRuntime.Size = new System.Drawing.Size(60, 17);
@@ -363,7 +365,7 @@
             // 
             this.lblWtd.AutoSize = true;
             this.lblWtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWtd.Location = new System.Drawing.Point(155, 145);
+            this.lblWtd.Location = new System.Drawing.Point(155, 128);
             this.lblWtd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWtd.Name = "lblWtd";
             this.lblWtd.Size = new System.Drawing.Size(40, 17);
@@ -374,7 +376,7 @@
             // 
             this.tbWatchDog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbWatchDog.Enabled = false;
-            this.tbWatchDog.Location = new System.Drawing.Point(199, 142);
+            this.tbWatchDog.Location = new System.Drawing.Point(199, 125);
             this.tbWatchDog.Margin = new System.Windows.Forms.Padding(4);
             this.tbWatchDog.Name = "tbWatchDog";
             this.tbWatchDog.Size = new System.Drawing.Size(54, 22);
@@ -383,7 +385,7 @@
             // tbRuntime
             // 
             this.tbRuntime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRuntime.Location = new System.Drawing.Point(71, 142);
+            this.tbRuntime.Location = new System.Drawing.Point(71, 125);
             this.tbRuntime.Margin = new System.Windows.Forms.Padding(4);
             this.tbRuntime.Name = "tbRuntime";
             this.tbRuntime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -412,7 +414,7 @@
             this.gbStack.Margin = new System.Windows.Forms.Padding(4);
             this.gbStack.Name = "gbStack";
             this.gbStack.Padding = new System.Windows.Forms.Padding(4);
-            this.gbStack.Size = new System.Drawing.Size(435, 38);
+            this.gbStack.Size = new System.Drawing.Size(435, 50);
             this.gbStack.TabIndex = 352;
             this.gbStack.TabStop = false;
             this.gbStack.Text = "Stack";
@@ -1125,7 +1127,7 @@
             this.gbRegister.Margin = new System.Windows.Forms.Padding(4);
             this.gbRegister.Name = "gbRegister";
             this.gbRegister.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRegister.Size = new System.Drawing.Size(411, 214);
+            this.gbRegister.Size = new System.Drawing.Size(411, 226);
             this.gbRegister.TabIndex = 350;
             this.gbRegister.TabStop = false;
             this.gbRegister.Text = "Register";
@@ -1849,6 +1851,8 @@
             // gbRam
             // 
             this.gbRam.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbRam.Controls.Add(this.label7);
+            this.gbRam.Controls.Add(this.label6);
             this.gbRam.Controls.Add(this.lblRam88);
             this.gbRam.Controls.Add(this.lblRam80);
             this.gbRam.Controls.Add(this.lblRam78);
@@ -1879,7 +1883,7 @@
             this.gbRam.Margin = new System.Windows.Forms.Padding(4);
             this.gbRam.Name = "gbRam";
             this.gbRam.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRam.Size = new System.Drawing.Size(267, 496);
+            this.gbRam.Size = new System.Drawing.Size(267, 527);
             this.gbRam.TabIndex = 353;
             this.gbRam.TabStop = false;
             this.gbRam.Text = "Ram";
@@ -1887,7 +1891,7 @@
             // lblRam88
             // 
             this.lblRam88.AutoSize = true;
-            this.lblRam88.Location = new System.Drawing.Point(7, 455);
+            this.lblRam88.Location = new System.Drawing.Point(7, 449);
             this.lblRam88.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam88.Name = "lblRam88";
             this.lblRam88.Size = new System.Drawing.Size(24, 17);
@@ -1897,7 +1901,7 @@
             // lblRam80
             // 
             this.lblRam80.AutoSize = true;
-            this.lblRam80.Location = new System.Drawing.Point(7, 431);
+            this.lblRam80.Location = new System.Drawing.Point(7, 425);
             this.lblRam80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam80.Name = "lblRam80";
             this.lblRam80.Size = new System.Drawing.Size(24, 17);
@@ -1907,7 +1911,7 @@
             // lblRam78
             // 
             this.lblRam78.AutoSize = true;
-            this.lblRam78.Location = new System.Drawing.Point(7, 406);
+            this.lblRam78.Location = new System.Drawing.Point(7, 400);
             this.lblRam78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam78.Name = "lblRam78";
             this.lblRam78.Size = new System.Drawing.Size(24, 17);
@@ -1917,7 +1921,7 @@
             // lblRam70
             // 
             this.lblRam70.AutoSize = true;
-            this.lblRam70.Location = new System.Drawing.Point(7, 382);
+            this.lblRam70.Location = new System.Drawing.Point(7, 376);
             this.lblRam70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam70.Name = "lblRam70";
             this.lblRam70.Size = new System.Drawing.Size(24, 17);
@@ -1927,7 +1931,7 @@
             // lblRam68
             // 
             this.lblRam68.AutoSize = true;
-            this.lblRam68.Location = new System.Drawing.Point(7, 357);
+            this.lblRam68.Location = new System.Drawing.Point(7, 351);
             this.lblRam68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam68.Name = "lblRam68";
             this.lblRam68.Size = new System.Drawing.Size(24, 17);
@@ -1937,7 +1941,7 @@
             // lblRam60
             // 
             this.lblRam60.AutoSize = true;
-            this.lblRam60.Location = new System.Drawing.Point(7, 332);
+            this.lblRam60.Location = new System.Drawing.Point(7, 326);
             this.lblRam60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam60.Name = "lblRam60";
             this.lblRam60.Size = new System.Drawing.Size(24, 17);
@@ -1947,7 +1951,7 @@
             // lblRam58
             // 
             this.lblRam58.AutoSize = true;
-            this.lblRam58.Location = new System.Drawing.Point(7, 308);
+            this.lblRam58.Location = new System.Drawing.Point(7, 302);
             this.lblRam58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam58.Name = "lblRam58";
             this.lblRam58.Size = new System.Drawing.Size(24, 17);
@@ -1957,7 +1961,7 @@
             // lblRam50
             // 
             this.lblRam50.AutoSize = true;
-            this.lblRam50.Location = new System.Drawing.Point(7, 283);
+            this.lblRam50.Location = new System.Drawing.Point(7, 277);
             this.lblRam50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam50.Name = "lblRam50";
             this.lblRam50.Size = new System.Drawing.Size(24, 17);
@@ -1967,7 +1971,7 @@
             // lblRam48
             // 
             this.lblRam48.AutoSize = true;
-            this.lblRam48.Location = new System.Drawing.Point(7, 258);
+            this.lblRam48.Location = new System.Drawing.Point(7, 252);
             this.lblRam48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam48.Name = "lblRam48";
             this.lblRam48.Size = new System.Drawing.Size(24, 17);
@@ -1977,7 +1981,7 @@
             // lblRam40
             // 
             this.lblRam40.AutoSize = true;
-            this.lblRam40.Location = new System.Drawing.Point(7, 234);
+            this.lblRam40.Location = new System.Drawing.Point(7, 228);
             this.lblRam40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam40.Name = "lblRam40";
             this.lblRam40.Size = new System.Drawing.Size(24, 17);
@@ -1987,7 +1991,7 @@
             // lblRam38
             // 
             this.lblRam38.AutoSize = true;
-            this.lblRam38.Location = new System.Drawing.Point(7, 209);
+            this.lblRam38.Location = new System.Drawing.Point(7, 203);
             this.lblRam38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam38.Name = "lblRam38";
             this.lblRam38.Size = new System.Drawing.Size(24, 17);
@@ -1997,7 +2001,7 @@
             // lblRam30
             // 
             this.lblRam30.AutoSize = true;
-            this.lblRam30.Location = new System.Drawing.Point(7, 185);
+            this.lblRam30.Location = new System.Drawing.Point(7, 179);
             this.lblRam30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam30.Name = "lblRam30";
             this.lblRam30.Size = new System.Drawing.Size(24, 17);
@@ -2007,7 +2011,7 @@
             // lblRam28
             // 
             this.lblRam28.AutoSize = true;
-            this.lblRam28.Location = new System.Drawing.Point(7, 160);
+            this.lblRam28.Location = new System.Drawing.Point(7, 154);
             this.lblRam28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam28.Name = "lblRam28";
             this.lblRam28.Size = new System.Drawing.Size(24, 17);
@@ -2017,7 +2021,7 @@
             // lblRam20
             // 
             this.lblRam20.AutoSize = true;
-            this.lblRam20.Location = new System.Drawing.Point(7, 135);
+            this.lblRam20.Location = new System.Drawing.Point(7, 129);
             this.lblRam20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam20.Name = "lblRam20";
             this.lblRam20.Size = new System.Drawing.Size(24, 17);
@@ -2027,7 +2031,7 @@
             // lblRam18
             // 
             this.lblRam18.AutoSize = true;
-            this.lblRam18.Location = new System.Drawing.Point(7, 111);
+            this.lblRam18.Location = new System.Drawing.Point(7, 105);
             this.lblRam18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam18.Name = "lblRam18";
             this.lblRam18.Size = new System.Drawing.Size(24, 17);
@@ -2037,7 +2041,7 @@
             // lblRam10
             // 
             this.lblRam10.AutoSize = true;
-            this.lblRam10.Location = new System.Drawing.Point(7, 86);
+            this.lblRam10.Location = new System.Drawing.Point(7, 80);
             this.lblRam10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam10.Name = "lblRam10";
             this.lblRam10.Size = new System.Drawing.Size(24, 17);
@@ -2047,7 +2051,7 @@
             // lblRam08
             // 
             this.lblRam08.AutoSize = true;
-            this.lblRam08.Location = new System.Drawing.Point(7, 62);
+            this.lblRam08.Location = new System.Drawing.Point(7, 56);
             this.lblRam08.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam08.Name = "lblRam08";
             this.lblRam08.Size = new System.Drawing.Size(24, 17);
@@ -2057,7 +2061,7 @@
             // lblRam2
             // 
             this.lblRam2.AutoSize = true;
-            this.lblRam2.Location = new System.Drawing.Point(93, 18);
+            this.lblRam2.Location = new System.Drawing.Point(93, 12);
             this.lblRam2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam2.Name = "lblRam2";
             this.lblRam2.Size = new System.Drawing.Size(24, 17);
@@ -2067,7 +2071,7 @@
             // lblRam3
             // 
             this.lblRam3.AutoSize = true;
-            this.lblRam3.Location = new System.Drawing.Point(120, 18);
+            this.lblRam3.Location = new System.Drawing.Point(120, 12);
             this.lblRam3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam3.Name = "lblRam3";
             this.lblRam3.Size = new System.Drawing.Size(24, 17);
@@ -2077,7 +2081,7 @@
             // lblRam4
             // 
             this.lblRam4.AutoSize = true;
-            this.lblRam4.Location = new System.Drawing.Point(147, 18);
+            this.lblRam4.Location = new System.Drawing.Point(147, 12);
             this.lblRam4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam4.Name = "lblRam4";
             this.lblRam4.Size = new System.Drawing.Size(24, 17);
@@ -2087,7 +2091,7 @@
             // lblRam5
             // 
             this.lblRam5.AutoSize = true;
-            this.lblRam5.Location = new System.Drawing.Point(173, 18);
+            this.lblRam5.Location = new System.Drawing.Point(173, 12);
             this.lblRam5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam5.Name = "lblRam5";
             this.lblRam5.Size = new System.Drawing.Size(24, 17);
@@ -2097,7 +2101,7 @@
             // lblRam6
             // 
             this.lblRam6.AutoSize = true;
-            this.lblRam6.Location = new System.Drawing.Point(200, 18);
+            this.lblRam6.Location = new System.Drawing.Point(200, 12);
             this.lblRam6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam6.Name = "lblRam6";
             this.lblRam6.Size = new System.Drawing.Size(24, 17);
@@ -2107,7 +2111,7 @@
             // lblRam7
             // 
             this.lblRam7.AutoSize = true;
-            this.lblRam7.Location = new System.Drawing.Point(227, 18);
+            this.lblRam7.Location = new System.Drawing.Point(227, 12);
             this.lblRam7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam7.Name = "lblRam7";
             this.lblRam7.Size = new System.Drawing.Size(24, 17);
@@ -2117,7 +2121,7 @@
             // lblRam00
             // 
             this.lblRam00.AutoSize = true;
-            this.lblRam00.Location = new System.Drawing.Point(7, 37);
+            this.lblRam00.Location = new System.Drawing.Point(7, 31);
             this.lblRam00.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam00.Name = "lblRam00";
             this.lblRam00.Size = new System.Drawing.Size(24, 17);
@@ -2127,7 +2131,7 @@
             // lblRam1
             // 
             this.lblRam1.AutoSize = true;
-            this.lblRam1.Location = new System.Drawing.Point(67, 18);
+            this.lblRam1.Location = new System.Drawing.Point(67, 12);
             this.lblRam1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam1.Name = "lblRam1";
             this.lblRam1.Size = new System.Drawing.Size(24, 17);
@@ -2137,17 +2141,38 @@
             // lblRam0
             // 
             this.lblRam0.AutoSize = true;
-            this.lblRam0.Location = new System.Drawing.Point(40, 18);
+            this.lblRam0.Location = new System.Drawing.Point(40, 12);
             this.lblRam0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRam0.Name = "lblRam0";
             this.lblRam0.Size = new System.Drawing.Size(24, 17);
             this.lblRam0.TabIndex = 196;
             this.lblRam0.Text = "+0";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 473);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 17);
+            this.label6.TabIndex = 286;
+            this.label6.Text = "90";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 497);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 17);
+            this.label7.TabIndex = 287;
+            this.label7.Text = "98";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1161, 697);
             this.Controls.Add(this.gbRam);
             this.Controls.Add(this.gbStack);
@@ -2338,6 +2363,8 @@
         private System.Windows.Forms.Label lblRam00;
         private System.Windows.Forms.Label lblRam1;
         private System.Windows.Forms.Label lblRam0;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
 
