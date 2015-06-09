@@ -502,6 +502,8 @@ namespace PicSim
             {
                 // NOP
                 incRuntime(1);
+                incPc();
+
             }
 
         // CLRWDT       00 0000 0110 0100

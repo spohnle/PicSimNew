@@ -57,6 +57,8 @@
             this.btnPortRa4 = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.gbRam = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblRam88 = new System.Windows.Forms.Label();
             this.lblRam80 = new System.Windows.Forms.Label();
             this.lblRam78 = new System.Windows.Forms.Label();
@@ -186,8 +188,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblStack7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.gbRam.SuspendLayout();
             this.gbPorts.SuspendLayout();
             this.gbRom.SuspendLayout();
@@ -199,7 +199,7 @@
             // btnLoadCode
             // 
             this.btnLoadCode.Location = new System.Drawing.Point(9, 20);
-            this.btnLoadCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoadCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadCode.Name = "btnLoadCode";
             this.btnLoadCode.Size = new System.Drawing.Size(119, 34);
             this.btnLoadCode.TabIndex = 1;
@@ -212,7 +212,7 @@
             this.tbPC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbPC.Location = new System.Drawing.Point(45, 36);
-            this.tbPC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPC.Margin = new System.Windows.Forms.Padding(4);
             this.tbPC.MaxLength = 32000;
             this.tbPC.Name = "tbPC";
             this.tbPC.Size = new System.Drawing.Size(35, 22);
@@ -225,7 +225,7 @@
             this.tbFSR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbFSR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbFSR.Location = new System.Drawing.Point(195, 36);
-            this.tbFSR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbFSR.Margin = new System.Windows.Forms.Padding(4);
             this.tbFSR.MaxLength = 2;
             this.tbFSR.Name = "tbFSR";
             this.tbFSR.Size = new System.Drawing.Size(35, 22);
@@ -236,7 +236,7 @@
             // btnStart
             // 
             this.btnStart.Location = new System.Drawing.Point(8, 57);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(119, 34);
             this.btnStart.TabIndex = 3;
@@ -301,7 +301,7 @@
             this.btnPortRa0.BackColor = System.Drawing.Color.White;
             this.btnPortRa0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRa0.Location = new System.Drawing.Point(376, 65);
-            this.btnPortRa0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRa0.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRa0.Name = "btnPortRa0";
             this.btnPortRa0.Size = new System.Drawing.Size(37, 28);
             this.btnPortRa0.TabIndex = 40;
@@ -315,7 +315,7 @@
             this.btnPortRa3.BackColor = System.Drawing.Color.White;
             this.btnPortRa3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRa3.Location = new System.Drawing.Point(243, 65);
-            this.btnPortRa3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRa3.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRa3.Name = "btnPortRa3";
             this.btnPortRa3.Size = new System.Drawing.Size(37, 28);
             this.btnPortRa3.TabIndex = 45;
@@ -329,7 +329,7 @@
             this.btnPortRa2.BackColor = System.Drawing.Color.White;
             this.btnPortRa2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRa2.Location = new System.Drawing.Point(288, 65);
-            this.btnPortRa2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRa2.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRa2.Name = "btnPortRa2";
             this.btnPortRa2.Size = new System.Drawing.Size(37, 28);
             this.btnPortRa2.TabIndex = 46;
@@ -343,7 +343,7 @@
             this.btnPortRa1.BackColor = System.Drawing.Color.White;
             this.btnPortRa1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRa1.Location = new System.Drawing.Point(331, 65);
-            this.btnPortRa1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRa1.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRa1.Name = "btnPortRa1";
             this.btnPortRa1.Size = new System.Drawing.Size(37, 28);
             this.btnPortRa1.TabIndex = 47;
@@ -357,7 +357,7 @@
             this.btnPortRb7.BackColor = System.Drawing.Color.White;
             this.btnPortRb7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb7.Location = new System.Drawing.Point(64, 122);
-            this.btnPortRb7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb7.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb7.Name = "btnPortRb7";
             this.btnPortRb7.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb7.TabIndex = 49;
@@ -371,7 +371,7 @@
             this.btnPortRb6.BackColor = System.Drawing.Color.White;
             this.btnPortRb6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb6.Location = new System.Drawing.Point(109, 122);
-            this.btnPortRb6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb6.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb6.Name = "btnPortRb6";
             this.btnPortRb6.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb6.TabIndex = 50;
@@ -385,7 +385,7 @@
             this.btnPortRb5.BackColor = System.Drawing.Color.White;
             this.btnPortRb5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb5.Location = new System.Drawing.Point(152, 122);
-            this.btnPortRb5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb5.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb5.Name = "btnPortRb5";
             this.btnPortRb5.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb5.TabIndex = 51;
@@ -399,7 +399,7 @@
             this.btnPortRb4.BackColor = System.Drawing.Color.White;
             this.btnPortRb4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb4.Location = new System.Drawing.Point(197, 122);
-            this.btnPortRb4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb4.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb4.Name = "btnPortRb4";
             this.btnPortRb4.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb4.TabIndex = 52;
@@ -413,7 +413,7 @@
             this.btnPortRb3.BackColor = System.Drawing.Color.White;
             this.btnPortRb3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb3.Location = new System.Drawing.Point(243, 122);
-            this.btnPortRb3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb3.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb3.Name = "btnPortRb3";
             this.btnPortRb3.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb3.TabIndex = 53;
@@ -427,7 +427,7 @@
             this.btnPortRb2.BackColor = System.Drawing.Color.White;
             this.btnPortRb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb2.Location = new System.Drawing.Point(288, 122);
-            this.btnPortRb2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb2.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb2.Name = "btnPortRb2";
             this.btnPortRb2.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb2.TabIndex = 54;
@@ -441,7 +441,7 @@
             this.btnPortRb1.BackColor = System.Drawing.Color.White;
             this.btnPortRb1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb1.Location = new System.Drawing.Point(331, 122);
-            this.btnPortRb1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb1.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb1.Name = "btnPortRb1";
             this.btnPortRb1.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb1.TabIndex = 55;
@@ -455,7 +455,7 @@
             this.btnPortRb0.BackColor = System.Drawing.Color.White;
             this.btnPortRb0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRb0.Location = new System.Drawing.Point(376, 122);
-            this.btnPortRb0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRb0.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRb0.Name = "btnPortRb0";
             this.btnPortRb0.Size = new System.Drawing.Size(37, 28);
             this.btnPortRb0.TabIndex = 56;
@@ -479,7 +479,7 @@
             this.tbW.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbW.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbW.Location = new System.Drawing.Point(117, 36);
-            this.tbW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbW.Margin = new System.Windows.Forms.Padding(4);
             this.tbW.MaxLength = 2;
             this.tbW.Name = "tbW";
             this.tbW.Size = new System.Drawing.Size(35, 22);
@@ -502,7 +502,7 @@
             this.tbBank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbBank.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbBank.Location = new System.Drawing.Point(357, 36);
-            this.tbBank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbBank.Margin = new System.Windows.Forms.Padding(4);
             this.tbBank.MaxLength = 1;
             this.tbBank.Name = "tbBank";
             this.tbBank.Size = new System.Drawing.Size(35, 22);
@@ -514,7 +514,7 @@
             this.btnPortRa4.BackColor = System.Drawing.Color.White;
             this.btnPortRa4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortRa4.Location = new System.Drawing.Point(197, 65);
-            this.btnPortRa4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortRa4.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortRa4.Name = "btnPortRa4";
             this.btnPortRa4.Size = new System.Drawing.Size(37, 28);
             this.btnPortRa4.TabIndex = 128;
@@ -526,7 +526,7 @@
             // btnReset
             // 
             this.btnReset.Location = new System.Drawing.Point(135, 20);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(119, 34);
             this.btnReset.TabIndex = 2;
@@ -565,13 +565,33 @@
             this.gbRam.Controls.Add(this.lblRam1);
             this.gbRam.Controls.Add(this.lblRam0);
             this.gbRam.Location = new System.Drawing.Point(16, 10);
-            this.gbRam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRam.Margin = new System.Windows.Forms.Padding(4);
             this.gbRam.Name = "gbRam";
-            this.gbRam.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRam.Padding = new System.Windows.Forms.Padding(4);
             this.gbRam.Size = new System.Drawing.Size(267, 535);
             this.gbRam.TabIndex = 259;
             this.gbRam.TabStop = false;
             this.gbRam.Text = "Ram";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 503);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 17);
+            this.label7.TabIndex = 287;
+            this.label7.Text = "98";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 479);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 17);
+            this.label6.TabIndex = 286;
+            this.label6.Text = "90";
             // 
             // lblRam88
             // 
@@ -838,7 +858,7 @@
             this.btnStatus0.BackColor = System.Drawing.Color.White;
             this.btnStatus0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus0.Location = new System.Drawing.Point(356, 85);
-            this.btnStatus0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus0.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus0.Name = "btnStatus0";
             this.btnStatus0.Size = new System.Drawing.Size(37, 28);
             this.btnStatus0.TabIndex = 268;
@@ -852,7 +872,7 @@
             this.btnStatus1.BackColor = System.Drawing.Color.White;
             this.btnStatus1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus1.Location = new System.Drawing.Point(311, 85);
-            this.btnStatus1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus1.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus1.Name = "btnStatus1";
             this.btnStatus1.Size = new System.Drawing.Size(37, 28);
             this.btnStatus1.TabIndex = 267;
@@ -866,7 +886,7 @@
             this.btnStatus2.BackColor = System.Drawing.Color.White;
             this.btnStatus2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus2.Location = new System.Drawing.Point(268, 85);
-            this.btnStatus2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus2.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus2.Name = "btnStatus2";
             this.btnStatus2.Size = new System.Drawing.Size(37, 28);
             this.btnStatus2.TabIndex = 266;
@@ -880,7 +900,7 @@
             this.btnStatus3.BackColor = System.Drawing.Color.White;
             this.btnStatus3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus3.Location = new System.Drawing.Point(223, 85);
-            this.btnStatus3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus3.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus3.Name = "btnStatus3";
             this.btnStatus3.Size = new System.Drawing.Size(37, 28);
             this.btnStatus3.TabIndex = 265;
@@ -894,7 +914,7 @@
             this.btnStatus4.BackColor = System.Drawing.Color.White;
             this.btnStatus4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus4.Location = new System.Drawing.Point(177, 85);
-            this.btnStatus4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus4.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus4.Name = "btnStatus4";
             this.btnStatus4.Size = new System.Drawing.Size(37, 28);
             this.btnStatus4.TabIndex = 264;
@@ -908,7 +928,7 @@
             this.btnStatus5.BackColor = System.Drawing.Color.White;
             this.btnStatus5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus5.Location = new System.Drawing.Point(132, 85);
-            this.btnStatus5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus5.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus5.Name = "btnStatus5";
             this.btnStatus5.Size = new System.Drawing.Size(37, 28);
             this.btnStatus5.TabIndex = 263;
@@ -922,7 +942,7 @@
             this.btnStatus6.BackColor = System.Drawing.Color.White;
             this.btnStatus6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus6.Location = new System.Drawing.Point(89, 85);
-            this.btnStatus6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus6.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus6.Name = "btnStatus6";
             this.btnStatus6.Size = new System.Drawing.Size(37, 28);
             this.btnStatus6.TabIndex = 262;
@@ -936,7 +956,7 @@
             this.btnStatus7.BackColor = System.Drawing.Color.White;
             this.btnStatus7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus7.Location = new System.Drawing.Point(44, 85);
-            this.btnStatus7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus7.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus7.Name = "btnStatus7";
             this.btnStatus7.Size = new System.Drawing.Size(37, 28);
             this.btnStatus7.TabIndex = 261;
@@ -1104,7 +1124,7 @@
             // btnStepByStep
             // 
             this.btnStepByStep.Location = new System.Drawing.Point(135, 57);
-            this.btnStepByStep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStepByStep.Margin = new System.Windows.Forms.Padding(4);
             this.btnStepByStep.Name = "btnStepByStep";
             this.btnStepByStep.Size = new System.Drawing.Size(119, 34);
             this.btnStepByStep.TabIndex = 4;
@@ -1117,7 +1137,7 @@
             this.btnOpt0.BackColor = System.Drawing.Color.White;
             this.btnOpt0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt0.Location = new System.Drawing.Point(356, 135);
-            this.btnOpt0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt0.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt0.Name = "btnOpt0";
             this.btnOpt0.Size = new System.Drawing.Size(37, 28);
             this.btnOpt0.TabIndex = 290;
@@ -1131,7 +1151,7 @@
             this.btnOpt1.BackColor = System.Drawing.Color.White;
             this.btnOpt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt1.Location = new System.Drawing.Point(311, 135);
-            this.btnOpt1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt1.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt1.Name = "btnOpt1";
             this.btnOpt1.Size = new System.Drawing.Size(37, 28);
             this.btnOpt1.TabIndex = 289;
@@ -1145,7 +1165,7 @@
             this.btnOpt2.BackColor = System.Drawing.Color.White;
             this.btnOpt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt2.Location = new System.Drawing.Point(268, 135);
-            this.btnOpt2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt2.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt2.Name = "btnOpt2";
             this.btnOpt2.Size = new System.Drawing.Size(37, 28);
             this.btnOpt2.TabIndex = 288;
@@ -1159,7 +1179,7 @@
             this.btnOpt3.BackColor = System.Drawing.Color.White;
             this.btnOpt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt3.Location = new System.Drawing.Point(223, 135);
-            this.btnOpt3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt3.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt3.Name = "btnOpt3";
             this.btnOpt3.Size = new System.Drawing.Size(37, 28);
             this.btnOpt3.TabIndex = 287;
@@ -1173,7 +1193,7 @@
             this.btnOpt4.BackColor = System.Drawing.Color.White;
             this.btnOpt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt4.Location = new System.Drawing.Point(177, 135);
-            this.btnOpt4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt4.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt4.Name = "btnOpt4";
             this.btnOpt4.Size = new System.Drawing.Size(37, 28);
             this.btnOpt4.TabIndex = 286;
@@ -1187,7 +1207,7 @@
             this.btnOpt5.BackColor = System.Drawing.Color.White;
             this.btnOpt5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt5.Location = new System.Drawing.Point(132, 135);
-            this.btnOpt5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt5.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt5.Name = "btnOpt5";
             this.btnOpt5.Size = new System.Drawing.Size(37, 28);
             this.btnOpt5.TabIndex = 285;
@@ -1201,7 +1221,7 @@
             this.btnOpt6.BackColor = System.Drawing.Color.White;
             this.btnOpt6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt6.Location = new System.Drawing.Point(89, 135);
-            this.btnOpt6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt6.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt6.Name = "btnOpt6";
             this.btnOpt6.Size = new System.Drawing.Size(37, 28);
             this.btnOpt6.TabIndex = 284;
@@ -1215,7 +1235,7 @@
             this.btnOpt7.BackColor = System.Drawing.Color.White;
             this.btnOpt7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpt7.Location = new System.Drawing.Point(44, 135);
-            this.btnOpt7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpt7.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpt7.Name = "btnOpt7";
             this.btnOpt7.Size = new System.Drawing.Size(37, 28);
             this.btnOpt7.TabIndex = 283;
@@ -1239,7 +1259,7 @@
             this.btnInt0.BackColor = System.Drawing.Color.White;
             this.btnInt0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt0.Location = new System.Drawing.Point(356, 187);
-            this.btnInt0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt0.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt0.Name = "btnInt0";
             this.btnInt0.Size = new System.Drawing.Size(37, 28);
             this.btnInt0.TabIndex = 299;
@@ -1253,7 +1273,7 @@
             this.btnInt1.BackColor = System.Drawing.Color.White;
             this.btnInt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt1.Location = new System.Drawing.Point(311, 187);
-            this.btnInt1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt1.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt1.Name = "btnInt1";
             this.btnInt1.Size = new System.Drawing.Size(37, 28);
             this.btnInt1.TabIndex = 298;
@@ -1267,7 +1287,7 @@
             this.btnInt2.BackColor = System.Drawing.Color.White;
             this.btnInt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt2.Location = new System.Drawing.Point(268, 187);
-            this.btnInt2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt2.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt2.Name = "btnInt2";
             this.btnInt2.Size = new System.Drawing.Size(37, 28);
             this.btnInt2.TabIndex = 297;
@@ -1281,7 +1301,7 @@
             this.btnInt3.BackColor = System.Drawing.Color.White;
             this.btnInt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt3.Location = new System.Drawing.Point(223, 187);
-            this.btnInt3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt3.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt3.Name = "btnInt3";
             this.btnInt3.Size = new System.Drawing.Size(37, 28);
             this.btnInt3.TabIndex = 296;
@@ -1295,7 +1315,7 @@
             this.btnInt4.BackColor = System.Drawing.Color.White;
             this.btnInt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt4.Location = new System.Drawing.Point(177, 187);
-            this.btnInt4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt4.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt4.Name = "btnInt4";
             this.btnInt4.Size = new System.Drawing.Size(37, 28);
             this.btnInt4.TabIndex = 295;
@@ -1309,7 +1329,7 @@
             this.btnInt5.BackColor = System.Drawing.Color.White;
             this.btnInt5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt5.Location = new System.Drawing.Point(132, 187);
-            this.btnInt5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt5.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt5.Name = "btnInt5";
             this.btnInt5.Size = new System.Drawing.Size(37, 28);
             this.btnInt5.TabIndex = 294;
@@ -1323,7 +1343,7 @@
             this.btnInt6.BackColor = System.Drawing.Color.White;
             this.btnInt6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt6.Location = new System.Drawing.Point(89, 187);
-            this.btnInt6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt6.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt6.Name = "btnInt6";
             this.btnInt6.Size = new System.Drawing.Size(37, 28);
             this.btnInt6.TabIndex = 293;
@@ -1337,7 +1357,7 @@
             this.btnInt7.BackColor = System.Drawing.Color.White;
             this.btnInt7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInt7.Location = new System.Drawing.Point(44, 187);
-            this.btnInt7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInt7.Margin = new System.Windows.Forms.Padding(4);
             this.btnInt7.Name = "btnInt7";
             this.btnInt7.Size = new System.Drawing.Size(37, 28);
             this.btnInt7.TabIndex = 292;
@@ -1398,9 +1418,9 @@
             this.gbPorts.Controls.Add(this.lblPortRB);
             this.gbPorts.Controls.Add(this.lblPortRA);
             this.gbPorts.Location = new System.Drawing.Point(291, 468);
-            this.gbPorts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPorts.Margin = new System.Windows.Forms.Padding(4);
             this.gbPorts.Name = "gbPorts";
-            this.gbPorts.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPorts.Padding = new System.Windows.Forms.Padding(4);
             this.gbPorts.Size = new System.Drawing.Size(435, 172);
             this.gbPorts.TabIndex = 301;
             this.gbPorts.TabStop = false;
@@ -1411,8 +1431,8 @@
             this.cbExtSource.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbExtSource.FormattingEnabled = true;
             this.cbExtSource.ItemHeight = 16;
-            this.cbExtSource.Location = new System.Drawing.Point(152, 15);
-            this.cbExtSource.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbExtSource.Location = new System.Drawing.Point(148, 16);
+            this.cbExtSource.Margin = new System.Windows.Forms.Padding(4);
             this.cbExtSource.Name = "cbExtSource";
             this.cbExtSource.Size = new System.Drawing.Size(97, 24);
             this.cbExtSource.TabIndex = 292;
@@ -1424,7 +1444,7 @@
             this.btnPortSource.BackColor = System.Drawing.Color.White;
             this.btnPortSource.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortSource.Location = new System.Drawing.Point(80, 15);
-            this.btnPortSource.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPortSource.Margin = new System.Windows.Forms.Padding(4);
             this.btnPortSource.Name = "btnPortSource";
             this.btnPortSource.Size = new System.Drawing.Size(56, 28);
             this.btnPortSource.TabIndex = 291;
@@ -1801,7 +1821,7 @@
             this.listProgramcode.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listProgramcode.HideSelection = false;
             this.listProgramcode.Location = new System.Drawing.Point(13, 17);
-            this.listProgramcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listProgramcode.Margin = new System.Windows.Forms.Padding(4);
             this.listProgramcode.MultiSelect = false;
             this.listProgramcode.Name = "listProgramcode";
             this.listProgramcode.ShowGroups = false;
@@ -1827,9 +1847,9 @@
             // 
             this.gbRom.Controls.Add(this.listProgramcode);
             this.gbRom.Location = new System.Drawing.Point(291, 10);
-            this.gbRom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRom.Margin = new System.Windows.Forms.Padding(4);
             this.gbRom.Name = "gbRom";
-            this.gbRom.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRom.Padding = new System.Windows.Forms.Padding(4);
             this.gbRom.Size = new System.Drawing.Size(855, 450);
             this.gbRom.TabIndex = 335;
             this.gbRom.TabStop = false;
@@ -1899,9 +1919,9 @@
             this.gbRegister.Controls.Add(this.lblPC);
             this.gbRegister.Controls.Add(this.tbPC);
             this.gbRegister.Location = new System.Drawing.Point(733, 468);
-            this.gbRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegister.Margin = new System.Windows.Forms.Padding(4);
             this.gbRegister.Name = "gbRegister";
-            this.gbRegister.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegister.Padding = new System.Windows.Forms.Padding(4);
             this.gbRegister.Size = new System.Drawing.Size(411, 242);
             this.gbRegister.TabIndex = 336;
             this.gbRegister.TabStop = false;
@@ -1922,7 +1942,7 @@
             this.tbTmr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTmr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbTmr.Location = new System.Drawing.Point(273, 36);
-            this.tbTmr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTmr.Margin = new System.Windows.Forms.Padding(4);
             this.tbTmr.MaxLength = 1;
             this.tbTmr.Name = "tbTmr";
             this.tbTmr.Size = new System.Drawing.Size(35, 22);
@@ -1944,9 +1964,9 @@
             this.gbMain.Controls.Add(this.btnReset);
             this.gbMain.Controls.Add(this.btnStepByStep);
             this.gbMain.Location = new System.Drawing.Point(16, 545);
-            this.gbMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMain.Margin = new System.Windows.Forms.Padding(4);
             this.gbMain.Name = "gbMain";
-            this.gbMain.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMain.Padding = new System.Windows.Forms.Padding(4);
             this.gbMain.Size = new System.Drawing.Size(267, 165);
             this.gbMain.TabIndex = 337;
             this.gbMain.TabStop = false;
@@ -1955,35 +1975,34 @@
             // btnHilfe
             // 
             this.btnHilfe.Location = new System.Drawing.Point(8, 94);
-            this.btnHilfe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHilfe.Margin = new System.Windows.Forms.Padding(4);
             this.btnHilfe.Name = "btnHilfe";
             this.btnHilfe.Size = new System.Drawing.Size(119, 34);
             this.btnHilfe.TabIndex = 24;
             this.btnHilfe.Text = "Help";
             this.btnHilfe.UseVisualStyleBackColor = true;
-            this.btnHilfe.Click += new System.EventHandler(this.btnHilfe_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 138);
+            this.label2.Location = new System.Drawing.Point(119, 138);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 17);
+            this.label2.Size = new System.Drawing.Size(23, 17);
             this.label2.TabIndex = 23;
-            this.label2.Text = "ys";
+            this.label2.Text = "µs";
             // 
             // cbWdtEnabled
             // 
             this.cbWdtEnabled.AutoSize = true;
             this.cbWdtEnabled.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbWdtEnabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbWdtEnabled.Location = new System.Drawing.Point(135, 101);
-            this.cbWdtEnabled.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbWdtEnabled.Location = new System.Drawing.Point(138, 101);
+            this.cbWdtEnabled.Margin = new System.Windows.Forms.Padding(4);
             this.cbWdtEnabled.Name = "cbWdtEnabled";
-            this.cbWdtEnabled.Size = new System.Drawing.Size(113, 21);
+            this.cbWdtEnabled.Size = new System.Drawing.Size(104, 21);
             this.cbWdtEnabled.TabIndex = 7;
-            this.cbWdtEnabled.Text = "WTD enabled";
+            this.cbWdtEnabled.Text = "WD enabled";
             this.cbWdtEnabled.UseVisualStyleBackColor = true;
             this.cbWdtEnabled.CheckStateChanged += new System.EventHandler(this.cbWdtEnabled_CheckStateChanged);
             // 
@@ -2002,19 +2021,19 @@
             // 
             this.lblWtd.AutoSize = true;
             this.lblWtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWtd.Location = new System.Drawing.Point(155, 139);
+            this.lblWtd.Location = new System.Drawing.Point(156, 139);
             this.lblWtd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWtd.Name = "lblWtd";
             this.lblWtd.Size = new System.Drawing.Size(40, 17);
             this.lblWtd.TabIndex = 21;
-            this.lblWtd.Text = "WTD";
+            this.lblWtd.Text = "WDT";
             // 
             // tbWatchDog
             // 
             this.tbWatchDog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbWatchDog.Enabled = false;
             this.tbWatchDog.Location = new System.Drawing.Point(199, 136);
-            this.tbWatchDog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbWatchDog.Margin = new System.Windows.Forms.Padding(4);
             this.tbWatchDog.Name = "tbWatchDog";
             this.tbWatchDog.Size = new System.Drawing.Size(54, 22);
             this.tbWatchDog.TabIndex = 6;
@@ -2023,7 +2042,7 @@
             // 
             this.tbRuntime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbRuntime.Location = new System.Drawing.Point(71, 136);
-            this.tbRuntime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRuntime.Margin = new System.Windows.Forms.Padding(4);
             this.tbRuntime.Name = "tbRuntime";
             this.tbRuntime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbRuntime.Size = new System.Drawing.Size(47, 22);
@@ -2131,9 +2150,9 @@
             this.gbStack.Controls.Add(this.lblStack0);
             this.gbStack.Controls.Add(this.lblStack6);
             this.gbStack.Location = new System.Drawing.Point(291, 644);
-            this.gbStack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbStack.Margin = new System.Windows.Forms.Padding(4);
             this.gbStack.Name = "gbStack";
-            this.gbStack.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbStack.Padding = new System.Windows.Forms.Padding(4);
             this.gbStack.Size = new System.Drawing.Size(435, 66);
             this.gbStack.TabIndex = 348;
             this.gbStack.TabStop = false;
@@ -2171,26 +2190,6 @@
             this.lblStack7.TabIndex = 348;
             this.lblStack7.Text = "000";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 479);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 17);
-            this.label6.TabIndex = 286;
-            this.label6.Text = "90";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 503);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 17);
-            this.label7.TabIndex = 287;
-            this.label7.Text = "98";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2203,7 +2202,7 @@
             this.Controls.Add(this.gbRam);
             this.Controls.Add(this.gbRom);
             this.Controls.Add(this.gbRegister);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "PicSim Blunck / Spohn";

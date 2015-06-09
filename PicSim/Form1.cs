@@ -16,7 +16,7 @@ namespace PicSim
         /// <summary>
         /// beinhaltet eine Picumgebung
         /// </summary>
-        Pic SickPic;
+        Pic picsimu;
 
         /// <summary>
         /// Gibt an, ob die Portansteuerung über die GUI oder über Extern läuft
@@ -36,7 +36,7 @@ namespace PicSim
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SickPic = new Pic();
+            picsimu = new Pic();
             createRamBoxes();
             refreshObjects();
             initComPort();
@@ -46,7 +46,7 @@ namespace PicSim
         private void btnLoadCode_Click(object sender, EventArgs e)
         {
             LoadSourcecode();
-            SickPic = new Pic();
+            picsimu = new Pic();
             LoadSourcecodeToPic();
             SelectLineOfCurrentPC();
             refreshObjects();
@@ -79,8 +79,8 @@ namespace PicSim
 
         private void doPicProgramStep()
         {
-            if (cbWdtEnabled.Checked == true) SickPic.incWatchdog();
-            SickPic.doNextProgramCode();
+            if (cbWdtEnabled.Checked == true) picsimu.incWatchdog();
+            picsimu.doNextProgramCode();
             refreshObjects();
             SelectLineOfCurrentPC();
 
@@ -169,14 +169,14 @@ namespace PicSim
             {
                 byte[] send = new byte[9];
                 // Zusammensetzen des SendBytes
-                send[0] = (byte)(0x30 + (SickPic.ram.read("TRISA") / 16));
-                send[1] = (byte)(0x30 + (SickPic.ram.read("TRISA") % 16));
-                send[2] = (byte)(0x30 + (SickPic.ram.read("PORTA") / 16));
-                send[3] = (byte)(0x30 + (SickPic.ram.read("PORTA") % 16));
-                send[4] = (byte)(0x30 + (SickPic.ram.read("TRISB") / 16));
-                send[5] = (byte)(0x30 + (SickPic.ram.read("TRISB") % 16));
-                send[6] = (byte)(0x30 + (SickPic.ram.read("PORTB") / 16));
-                send[7] = (byte)(0x30 + (SickPic.ram.read("PORTB") % 16));
+                send[0] = (byte)(0x30 + (picsimu.ram.read("TRISA") / 16));
+                send[1] = (byte)(0x30 + (picsimu.ram.read("TRISA") % 16));
+                send[2] = (byte)(0x30 + (picsimu.ram.read("PORTA") / 16));
+                send[3] = (byte)(0x30 + (picsimu.ram.read("PORTA") % 16));
+                send[4] = (byte)(0x30 + (picsimu.ram.read("TRISB") / 16));
+                send[5] = (byte)(0x30 + (picsimu.ram.read("TRISB") % 16));
+                send[6] = (byte)(0x30 + (picsimu.ram.read("PORTB") / 16));
+                send[7] = (byte)(0x30 + (picsimu.ram.read("PORTB") % 16));
                 send[8] = 0x0D;
                 port.Write(send, 0, 9);
             }
@@ -196,26 +196,26 @@ namespace PicSim
             {
                 // Auf Interrupts testen
                 int extIntRa4 = 0, extIntExt = 0, extIntPortChange = 0;
-                if (SickPic.ram.readFlag("RA4")) extIntRa4 = 1;
-                if (SickPic.ram.readFlag("RB0")) extIntExt = 1;
-                extIntPortChange = (SickPic.ram.read("PORTB") / 16);
+                if (picsimu.ram.readFlag("RA4")) extIntRa4 = 1;
+                if (picsimu.ram.readFlag("RB0")) extIntExt = 1;
+                extIntPortChange = (picsimu.ram.read("PORTB") / 16);
 
                 // Ports aktualisieren
-                SickPic.ram.write("PORTA", (byte)(((received[0] % 2) * 16) + (received[1] % 16)));
-                SickPic.ram.write("PORTB", (byte)(((received[2] % 16) * 16) + (received[3] % 16)));
+                picsimu.ram.write("PORTA", (byte)(((received[0] % 2) * 16) + (received[1] % 16)));
+                picsimu.ram.write("PORTB", (byte)(((received[2] % 16) * 16) + (received[3] % 16)));
 
                 // Wenn Interrupts erkannt wurden, diese ausführen
                 // (Findet erst nach der Aktualisierung der Werte statt, damit die neuen gleich beim Interrupt verwendet werden
-                if ((received[0] % 2) != extIntRa4) SickPic.checkTimerInterruptRA4();
-                if ((received[3] % 2) != extIntExt) SickPic.checkExternalInterrupt();
-                if (extIntPortChange != received[2]) SickPic.checkPortChangeInterrupt();
+                if ((received[0] % 2) != extIntRa4) picsimu.checkTimerInterruptRA4();
+                if ((received[3] % 2) != extIntExt) picsimu.checkExternalInterrupt();
+                if (extIntPortChange != received[2]) picsimu.checkPortChangeInterrupt();
 
                 // Auf Externen Reset testen
                 if (((received[0] / 2) % 2) == 0)
                 {
                     // tmrAutorun.Enabled = false;   // auskommentiert (Stop den Autorun bei einem externen reset
                     // SwapStartButtonText(btnStart);
-                    SickPic.doReset();
+                    picsimu.doReset();
                     refreshObjects();
                     SelectLineOfCurrentPC();
                 }
@@ -232,7 +232,7 @@ namespace PicSim
         /// <param name="e"></param>
         private void Button_Reset_Click(object sender, EventArgs e)
         {
-            SickPic.doReset();
+            picsimu.doReset();
             refreshObjects();
             SelectLineOfCurrentPC();
         }
@@ -312,7 +312,7 @@ namespace PicSim
                 {
                     codenr = Int32.Parse(linientext.Substring(0, 4), System.Globalization.NumberStyles.HexNumber);
                     code = Int32.Parse(linientext.Substring(5, 4), System.Globalization.NumberStyles.HexNumber);
-                    SickPic.rom.write(codenr, code);
+                    picsimu.rom.write(codenr, code);
 
                 }
             }
@@ -328,7 +328,7 @@ namespace PicSim
                 if (linientext.Substring(0, 4) != "    ")
                 {
                     int nummer = Int32.Parse(linientext.Substring(0, 4), System.Globalization.NumberStyles.HexNumber);
-                    if (nummer == SickPic.getPc())
+                    if (nummer == picsimu.getPc())
                     {
                         //listProgramcode.Select();
                         listProgramcode.Items[linie].Selected = true;
@@ -365,12 +365,12 @@ namespace PicSim
             {
                 switch (btnsender.Name)
                 {
-                    case ("btnPortRb0"): SickPic.checkExternalInterrupt(); break;
-                    case ("btnPortRb4"): SickPic.checkPortChangeInterrupt(); break;
-                    case ("btnPortRb5"): SickPic.checkPortChangeInterrupt(); break;
-                    case ("btnPortRb6"): SickPic.checkPortChangeInterrupt(); break;
-                    case ("btnPortRb7"): SickPic.checkPortChangeInterrupt(); break;
-                    case ("btnPortRa4"): SickPic.checkTimerInterruptRA4(); break;
+                    case ("btnPortRb0"): picsimu.checkExternalInterrupt(); break;
+                    case ("btnPortRb4"): picsimu.checkPortChangeInterrupt(); break;
+                    case ("btnPortRb5"): picsimu.checkPortChangeInterrupt(); break;
+                    case ("btnPortRb6"): picsimu.checkPortChangeInterrupt(); break;
+                    case ("btnPortRb7"): picsimu.checkPortChangeInterrupt(); break;
+                    case ("btnPortRa4"): picsimu.checkTimerInterruptRA4(); break;
                     default: break;
                 }
                 refreshObjects();
@@ -388,7 +388,7 @@ namespace PicSim
                 if (portnumber < 5)
                 {
                     Button buttonportra = (Button)GetControlByName("btnPortRa" + portnumber.ToString());
-                    if (SickPic.ram.readFlag("RA" + portnumber.ToString()) == true)
+                    if (picsimu.ram.readFlag("RA" + portnumber.ToString()) == true)
                     {
                         buttonportra.Text = "1";
                     }
@@ -400,7 +400,7 @@ namespace PicSim
                 }
 
                 Button buttonportrb = (Button)GetControlByName("btnPortRb" + portnumber.ToString());
-                if (SickPic.ram.readFlag("RB" + portnumber.ToString()) == true)
+                if (picsimu.ram.readFlag("RB" + portnumber.ToString()) == true)
                 {
                     buttonportrb.Text = "1";
                 }
@@ -423,7 +423,7 @@ namespace PicSim
                 {
                     Button buttonportra = (Button)GetControlByName("btnPortRa" + portnumber.ToString());
                     Label labelportra = (Label)GetControlByName("lblPortRa" + portnumber.ToString());
-                    if (SickPic.ram.readFlag(133, portnumber) == false)
+                    if (picsimu.ram.readFlag(133, portnumber) == false)
                     {
                         buttonportra.BackColor = Color.FromArgb(255, 192, 192);
                         buttonportra.Enabled = false;
@@ -441,7 +441,7 @@ namespace PicSim
                 Button buttonportrb = (Button)GetControlByName("btnPortRb" + portnumber.ToString());
                 Label labelportrb = (Label)GetControlByName("lblPortRb" + portnumber.ToString());
 
-                if (SickPic.ram.readFlag(134, portnumber) == false)
+                if (picsimu.ram.readFlag(134, portnumber) == false)
                 {
                     buttonportrb.BackColor = Color.FromArgb(255, 192, 192);
                     buttonportrb.Enabled = false;
@@ -467,7 +467,7 @@ namespace PicSim
             {
                 for (int y = 1; y <= 2; y++)
                 {
-                    byte ram = SickPic.ram.readBank(x, (byte)(y - 1));
+                    byte ram = picsimu.ram.readBank(x, (byte)(y - 1));
 
                     if (y == 1)
                     {
@@ -499,7 +499,7 @@ namespace PicSim
         /// </summary>
         private void refreshStatus()
         {
-            byte reg = SickPic.getRegStatus();
+            byte reg = picsimu.getRegStatus();
             string Status = Convert.ToString(reg, 2);
             int st = Status.Length;
 
@@ -528,7 +528,7 @@ namespace PicSim
             {
                 string StatusButtonName = "btnOpt" + port.ToString();
                 Button StatusButton = (Button)GetControlByName(StatusButtonName);
-                if (SickPic.ram.readFlag(129, port) == true)
+                if (picsimu.ram.readFlag(129, port) == true)
                 {
                     StatusButton.Text = "1";
                 }
@@ -548,7 +548,7 @@ namespace PicSim
             {
                 string InterruptButtonName = "btnInt" + port.ToString();
                 Button InterruptButton = (Button)GetControlByName(InterruptButtonName);
-                if (SickPic.ram.readFlag(11, port) == true)
+                if (picsimu.ram.readFlag(11, port) == true)
                 {
                     InterruptButton.Text = "1";
                 }
@@ -567,7 +567,7 @@ namespace PicSim
             for (int stack = 0; stack < 8; stack++)
             {
                 string stackName = "lblStack" + stack.ToString();
-                string stackValue = Convert.ToString(SickPic.stack.getStack(stack), 16);
+                string stackValue = Convert.ToString(picsimu.stack.getStack(stack), 16);
                 while (stackValue.Length < 3)
                 {
                     stackValue = "0" + stackValue;
@@ -623,13 +623,13 @@ namespace PicSim
 
 
             //Aktualisieren der restlichen Textboxen
-            tbBank.Text = SickPic.ram.getPage().ToString();
-            tbPC.Text = Convert.ToString(SickPic.getPc(), 16);
-            tbW.Text = Convert.ToString(SickPic.getRegW(), 16);
-            tbFSR.Text = Convert.ToString(SickPic.ram.read("FSR"), 16);
-            tbTmr.Text = Convert.ToString(SickPic.ram.read(1), 16);
-            tbWatchDog.Text = SickPic.getWatchDog().ToString();
-            tbRuntime.Text = SickPic.getRuntime().ToString();
+            tbBank.Text = picsimu.ram.getPage().ToString();
+            tbPC.Text = Convert.ToString(picsimu.getPc(), 16);
+            tbW.Text = Convert.ToString(picsimu.getRegW(), 16);
+            tbFSR.Text = Convert.ToString(picsimu.ram.read("FSR"), 16);
+            tbTmr.Text = Convert.ToString(picsimu.ram.read(1), 16);
+            tbWatchDog.Text = picsimu.getWatchDog().ToString();
+            tbRuntime.Text = picsimu.getRuntime().ToString();
         }
 
         /// <summary>
@@ -645,7 +645,7 @@ namespace PicSim
                 {
                     if (c.Name == rambox)
                     {
-                        SickPic.ram.write(ram, Convert.ToByte((string)c.Text, 16));
+                        picsimu.ram.write(ram, Convert.ToByte((string)c.Text, 16));
                     }
 
                 }
@@ -663,9 +663,9 @@ namespace PicSim
                 Button statusbutton = (Button)GetControlByName("btnStatus" + statusflag.ToString());
                 Button Interruptbutton = (Button)GetControlByName("btnInt" + statusflag.ToString());
                 Button Optionbutton = (Button)GetControlByName("btnOpt" + statusflag.ToString());
-                SickPic.ram.writeFlag(3, statusflag, Convert.ToBoolean(Convert.ToByte(statusbutton.Text)));
-                SickPic.ram.writeFlag(11, statusflag, Convert.ToBoolean(Convert.ToByte(Interruptbutton.Text)));
-                SickPic.ram.writeFlag(129, statusflag, Convert.ToBoolean(Convert.ToByte(Optionbutton.Text)));
+                picsimu.ram.writeFlag(3, statusflag, Convert.ToBoolean(Convert.ToByte(statusbutton.Text)));
+                picsimu.ram.writeFlag(11, statusflag, Convert.ToBoolean(Convert.ToByte(Interruptbutton.Text)));
+                picsimu.ram.writeFlag(129, statusflag, Convert.ToBoolean(Convert.ToByte(Optionbutton.Text)));
             }
         }
 
@@ -679,10 +679,10 @@ namespace PicSim
                 if (portnumber < 5)
                 {
                     Button buttonportra = (Button)GetControlByName("btnPortRa" + portnumber.ToString());
-                    SickPic.ram.writeFlag("RA" + portnumber.ToString(), Convert.ToBoolean(Convert.ToByte(buttonportra.Text)));
+                    picsimu.ram.writeFlag("RA" + portnumber.ToString(), Convert.ToBoolean(Convert.ToByte(buttonportra.Text)));
                 }
                 Button buttonportrb = (Button)GetControlByName("btnPortRb" + portnumber.ToString());
-                SickPic.ram.writeFlag("RB" + portnumber.ToString(), Convert.ToBoolean(Convert.ToByte(buttonportrb.Text)));
+                picsimu.ram.writeFlag("RB" + portnumber.ToString(), Convert.ToBoolean(Convert.ToByte(buttonportrb.Text)));
             }
         }
 
@@ -691,12 +691,12 @@ namespace PicSim
         /// </summary>
         private void SetPcFsrWTextBoxes()
         {
-            if (string.Compare(tbPC.Text, "") == 0) SickPic.setPc(Convert.ToByte(tbPC.Text, 16));
-            if (string.Compare(tbW.Text, "") == 0) SickPic.setRegW(Convert.ToByte(tbW.Text, 16));
-            if (string.Compare(tbFSR.Text, "") == 0) SickPic.ram.write("FSR", Convert.ToByte(tbFSR.Text, 16));
-            if (string.Compare(tbTmr.Text, "") == 0) SickPic.ram.write(1, Convert.ToByte(tbTmr.Text, 16));
+            if (string.Compare(tbPC.Text, "") == 0) picsimu.setPc(Convert.ToByte(tbPC.Text, 16));
+            if (string.Compare(tbW.Text, "") == 0) picsimu.setRegW(Convert.ToByte(tbW.Text, 16));
+            if (string.Compare(tbFSR.Text, "") == 0) picsimu.ram.write("FSR", Convert.ToByte(tbFSR.Text, 16));
+            if (string.Compare(tbTmr.Text, "") == 0) picsimu.ram.write(1, Convert.ToByte(tbTmr.Text, 16));
 
-            // Hier fehlt die aktivierte Bank SickPic.ram.set(Convert.ToByte(tbW.Text, 16));
+            // Hier fehlt die aktivierte Bank picsimu.ram.set(Convert.ToByte(tbW.Text, 16));
         }
 
         /// <summary>
@@ -820,7 +820,7 @@ namespace PicSim
             string textBoxNumber = rambox.Name.Substring(5, 2);
             if (rambox.Text != "")
             {
-                SickPic.ram.write((int)Convert.ToInt16(textBoxNumber, 16), (byte)Convert.ToByte((string)rambox.Text, 16));
+                picsimu.ram.write((int)Convert.ToInt16(textBoxNumber, 16), (byte)Convert.ToByte((string)rambox.Text, 16));
             }
         }
 
@@ -873,14 +873,14 @@ namespace PicSim
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnHilfe_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                System.Diagnostics.Process.Start("./Dokumentation_PICSim.pdf");
-            }
-            catch (Exception ex) { MessageBox.Show("Hilfedatei \"Dokumention_PICSim.pdf\" nicht vorhanden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
+        //private void btnHilfe_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        System.Diagnostics.Process.Start("./Dokumentation_PICSim.pdf");
+        //    }
+        //    catch (Exception ex) { MessageBox.Show("Hilfedatei \"Dokumention_PICSim.pdf\" nicht vorhanden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        //}
 
     }
 }
