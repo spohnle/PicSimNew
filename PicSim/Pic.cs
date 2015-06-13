@@ -308,7 +308,30 @@ namespace PicSim
                 ram.writeFlag("GIE", false);  // Interrupts deaktivieren
                 interrupt();
             }
-            else ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+            else
+            {
+                
+                if(ram.readFlag("PSA")) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+	            if ((ram.readFlag("PS0") == false) && (ram.readFlag("PS1") == false) && (ram.readFlag("PS2") == false) && (runtime % 2 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == true) && (ram.readFlag("PS1") == false) && (ram.readFlag("PS2") == false) && (runtime % 4 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == false) && (ram.readFlag("PS1") == true) && (ram.readFlag("PS2") == false) && (runtime % 8 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == true) && (ram.readFlag("PS1") == true) && (ram.readFlag("PS2") == false) && (runtime % 16 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == false) && (ram.readFlag("PS1") == false) && (ram.readFlag("PS2") == true) && (runtime % 32 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == true) && (ram.readFlag("PS1") == false) && (ram.readFlag("PS2") == true) && (runtime % 64 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == false) && (ram.readFlag("PS1") == true) && (ram.readFlag("PS2") == true) && (runtime % 128 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+
+                if ((ram.readFlag("PS0") == true) && (ram.readFlag("PS1") == true) && (ram.readFlag("PS2") == true) && (runtime % 256 == 0)) ram.write("TMR0", (byte)(ram.read("TMR0") + 1));
+                
+
+            }
+
         }
 
         /// <summary>
@@ -496,15 +519,7 @@ namespace PicSim
                 incRuntime(2);
             }
 
-        // NOP          00 0000 0xx0 0000
-
-            else if (opCodeStartWith("0000000"))
-            {
-                // NOP
-                incRuntime(1);
-                incPc();
-
-            }
+        
 
         // CLRWDT       00 0000 0110 0100
 
@@ -542,6 +557,14 @@ namespace PicSim
                         if (d) ram.write(f, (byte)result);
                         else setRegW((byte)result);
                         incRuntime(1);
+                    }
+             // NOP          00 0000 0xx0 0000
+
+                    else if (opCodeStartWith("0000000"))
+                    {
+                        // NOP
+                        incRuntime(1);
+
                     }
 
             // ANDWF        00 0101 dfff ffff       Affected Bits: Z

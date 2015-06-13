@@ -151,7 +151,7 @@ namespace PicSim
         }
 
         /// <summary>
-        /// Timer der züglisch die externen Ports aktualisiert
+        /// Timer der zyklisch die externen Ports aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -222,6 +222,7 @@ namespace PicSim
             }
             // Achtung: Löst im Debugmodus Threadfehler aus
             refreshPorts();
+            refreshObjects();
         }
 
 
